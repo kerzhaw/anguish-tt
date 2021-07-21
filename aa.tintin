@@ -1,0 +1,218 @@
+#ACTION {The oak boomerang tumbles to the ground.}
+{
+    get boomerang
+}
+
+#ACTION {The pouch of Hobbitat Gold is finished.}
+{
+    eat empty pouch
+}
+
+#ACTION {You drop your finished cigar and step on it.}
+{
+    take butt;
+    eat butt
+}
+
+#ACTION {You have used up the last of your red brimstone.}
+{
+    eat empty tin
+}
+
+#ACTION {You killed %0.}
+{
+    eat corpse
+}
+
+#ACTION {Your party just killed %0.}
+{
+    eat corpse
+}
+
+
+#ALIAS {aa}
+{
+    #session aa anguish.org 2222
+}
+
+#ALIAS {ac}
+{
+    accept
+}
+
+#ALIAS {bw}
+{
+    bind wounds
+}
+
+#ALIAS {c}
+{
+    pray cure
+}
+
+#ALIAS {cu}
+{
+    current
+}
+
+#ALIAS {da}
+{
+    drop all
+}
+
+#ALIAS {de}
+{
+    deliver
+}
+
+#ALIAS {door}
+{
+    enter door
+}
+
+#ALIAS {ec}
+{
+    eat corpse
+}
+
+#ALIAS {f}
+{
+    pray fix
+}
+
+#ALIAS {fx}
+{
+    effects
+}
+
+#ALIAS {ga}
+{
+    get all
+}
+
+#ALIAS {gc}
+{
+    get all from corpse %0
+}
+
+#ALIAS {k}
+{
+    throw boomerang at %0;
+    wield mace;
+    kill %0
+}
+
+#ALIAS {map}
+{
+    read map
+}
+
+#ALIAS {meds}
+{
+    examine medicinals %0
+}
+
+#ALIAS {nl}
+{
+    help nextlevel
+}
+
+#ALIAS {nopipe}
+{
+    extinguish pipe
+}
+
+#ALIAS {pouches}
+{
+    exa pouch %0
+}
+
+#ALIAS {sa}
+{
+    sell all
+}
+
+#ALIAS {sm}
+{
+    fill pipe;
+    smoke pipe
+}
+
+#ALIAS {sv}
+{
+    #write aa.tintin
+}
+
+#ALIAS {t}
+{
+    thaw %0
+}
+
+#ALIAS {tin}
+{
+    exa tin %0
+}
+
+#ALIAS {x}
+{
+    #regexp {%0} {^$}
+    {
+        look at opponent
+    };
+    #else
+    {
+        examine %0;
+        search %0
+    }
+}
+
+#ALIAS {xc}
+{
+    examine corpse
+}
+
+#ALIAS {xs}
+{
+    examine dawlish
+}
+
+
+#CONFIG {AUTO TAB} {5000}
+#CONFIG {BUFFER SIZE} {10000}
+#CONFIG {CHARSET} {UTF-8}
+#CONFIG {COLOR MODE} {TRUE}
+#CONFIG {COLOR PATCH} {OFF}
+#CONFIG {COMMAND COLOR} {\e[0;37m}
+#CONFIG {COMMAND ECHO} {ON}
+#CONFIG {CONNECT RETRY} {0.0}
+#CONFIG {HISTORY SIZE} {1000}
+#CONFIG {LOG MODE} {RAW}
+#CONFIG {MOUSE} {OFF}
+#CONFIG {PACKET PATCH} {AUTO OFF}
+#CONFIG {RANDOM SEED} {2051029287}
+#CONFIG {REPEAT CHAR} {!}
+#CONFIG {REPEAT ENTER} {OFF}
+#CONFIG {SCREEN READER} {OFF}
+#CONFIG {SCROLL LOCK} {ON}
+#CONFIG {SPEEDWALK} {OFF}
+#CONFIG {TAB WIDTH} {8}
+#CONFIG {TELNET} {ON}
+#CONFIG {TINTIN CHAR} {#}
+#CONFIG {VERBATIM} {OFF}
+#CONFIG {VERBATIM CHAR} {\}
+#CONFIG {VERBOSE} {OFF}
+#CONFIG {WORDWRAP} {ON}
+
+#PATHDIR {d} {u} {32}
+#PATHDIR {e} {w} {2}
+#PATHDIR {n} {s} {1}
+#PATHDIR {ne} {sw} {3}
+#PATHDIR {nw} {se} {9}
+#PATHDIR {s} {n} {4}
+#PATHDIR {se} {nw} {6}
+#PATHDIR {sw} {ne} {12}
+#PATHDIR {u} {d} {16}
+#PATHDIR {w} {e} {8}
+
+#TICKER {stay-alive} {blink} {10800}
+
