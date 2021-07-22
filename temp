@@ -1,28 +1,28 @@
-<fc62828>[ 1 ]<088> You nicked %0.
-<fcf561a>[ 2 ]<088> You notched %0.
-<fd37c11>[ 3-4 ]<088> You slit %0.
-<fd09f1d>[ 5-9 ]<088> You sliced %0 deeply.
-<fcac13b>[ 10-19 ]<088> You slashed %0 viciously.
-<fbfe062>[ 20-29 ]<088> You sheared %0 ruthlessly.
-<fb1ff91>[ 30+ ]<088> You cleaved %0 violently.
-<fc62828>[ 1 ]<088> You battered %0.
-<fcf561a>[ 2 ]<088> You pummelled %0.
-<fd37c11>[ 3-4 ]<088> You clubbed %0.
-<fd09f1d>[ 5-9 ]<088> You pounded %0 heartlessly.
-<fcac13b>[ 10-19 ]<088> You bludgeoned %0 heavily.
-<fbfe062>[ 20-29 ]<088> You hammered %0 brutaly.
-<fb1ff91>[ 30+ ]<088> You pulverised %0 into mash.
-<fc62828>[ 1 ]<088> You pricked %0.
-<fcf561a>[ 2 ]<088> You stuck %0.
-<fd37c11>[ 3-4 ]<088> You lacerated %0.
-<fd09f1d>[ 5-9 ]<088> You pierced %0 keenly.
-<fcac13b>[ 10-19 ]<088> You impaled %0 sharply.
-<fbfe062>[ 20-29 ]<088> You skewered %0.
-<fb1ff91>[ 30+ ]<088> You perforated %0 like a sieve.
-<fc62828>[ 1 ]<088> You cut %0.
-<fcf561a>[ 2 ]<088> You hacked %0.
-<fd37c11>[ 3-4 ]<088> You gashed %0.
-<fd09f1d>[ 5-9 ]<088> You chopped %0 bluntly.
-<fcac13b>[ 10-19 ]<088> You hewed %0 crudely.
-<fbfe062>[ 20-29 ]<088> You cleaved %0 into hash.
-<fb1ff91>[ 30+ ]<088> You carved %0 with brute force.
+<fb1ff91>[ 1 ]<088> You nicked %1's %2.
+<fbfe062>[ 2 ]<088> You notched %1's %2.
+<fcac13b>[ 3-4 ]<088> You slit %1's %2.
+<fd09f1d>[ 5-9 ]<088> You sliced %1's %2 deeply.
+<fd37c11>[ 10-19 ]<088> You slashed %1's %2 viciously.
+<fcf561a>[ 20-29 ]<088> You sheared %1's %2 ruthlessly.
+<fc62828>[ 30+ ]<088> You cleaved %1's %2 violently.
+<fb1ff91>[ 1 ]<088> You battered %1's %2.
+<fbfe062>[ 2 ]<088> You pummelled %1's %2.
+<fcac13b>[ 3-4 ]<088> You clubbed %1's %2.
+<fd09f1d>[ 5-9 ]<088> You pounded %1's %2 heartlessly.
+<fd37c11>[ 10-19 ]<088> You bludgeoned %1's %2 heavily.
+<fcf561a>[ 20-29 ]<088> You hammered %1's %2 brutaly.
+<fc62828>[ 30+ ]<088> You pulverised %1's %2 into mash.
+<fb1ff91>[ 1 ]<088> You pricked %1's %2.
+<fbfe062>[ 2 ]<088> You stuck %1's %2.
+<fcac13b>[ 3-4 ]<088> You lacerated %1's %2.
+<fd09f1d>[ 5-9 ]<088> You pierced %1's %2 keenly.
+<fd37c11>[ 10-19 ]<088> You impaled %1's %2 sharply.
+<fcf561a>[ 20-29 ]<088> You skewered %1's %2.
+<fc62828>[ 30+ ]<088> You perforated %1's %2 like a sieve.
+<fb1ff91>[ 1 ]<088> You cut %1's %2.
+<fbfe062>[ 2 ]<088> You hacked %1's %2.
+<fcac13b>[ 3-4 ]<088> You gashed %1's %2.
+<fd09f1d>[ 5-9 ]<088> You chopped %1's %2 bluntly.
+<fd37c11>[ 10-19 ]<088> You hewed %1's %2 crudely.
+<fcf561a>[ 20-29 ]<088> You cleaved %1's %2 into hash.
+<fc62828>[ 30+ ]<088> You carved %1's %2 with brute force.
