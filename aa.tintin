@@ -216,3 +216,31 @@
 
 #TICKER {stay-alive} {blink} {10800}
 
+#sub {You nicked %0.} {<fc62828>[ 1 ]<088> You nicked %0.}
+#sub {You notched %0.} {<fcf561a>[ 2 ]<088> You notched %0.}
+#sub {You slit %0.} {<fd37c11>[ 3-4 ]<088> You slit %0.}
+#sub {You sliced %0 deeply.} {<fd09f1d>[ 5-9 ]<088> You sliced %0 deeply.}
+#sub {You slashed %0 viciously.} {<fcac13b>[ 10-19 ]<088> You slashed %0 viciously.}
+#sub {You sheared %0 ruthlessly.} {<fbfe062>[ 20-29 ]<088> You sheared %0 ruthlessly.}
+#sub {You cleaved %0 violently.} {<fb1ff91>[ 30+ ]<088> You cleaved %0 violently.}
+#sub {You battered %0.} {<fc62828>[ 1 ]<088> You battered %0.}
+#sub {You pummelled %0.} {<fcf561a>[ 2 ]<088> You pummelled %0.}
+#sub {You clubbed %0.} {<fd37c11>[ 3-4 ]<088> You clubbed %0.}
+#sub {You pounded %0 heartlessly.} {<fd09f1d>[ 5-9 ]<088> You pounded %0 heartlessly.}
+#sub {You bludgeoned %0 heavily.} {<fcac13b>[ 10-19 ]<088> You bludgeoned %0 heavily.}
+#sub {You hammered %0 brutaly.} {<fbfe062>[ 20-29 ]<088> You hammered %0 brutaly.}
+#sub {You pulverised %0 into mash.} {<fb1ff91>[ 30+ ]<088> You pulverised %0 into mash.}
+#sub {You pricked %0.} {<fc62828>[ 1 ]<088> You pricked %0.}
+#sub {You stuck %0.} {<fcf561a>[ 2 ]<088> You stuck %0.}
+#sub {You lacerated %0.} {<fd37c11>[ 3-4 ]<088> You lacerated %0.}
+#sub {You pierced %0 keenly.} {<fd09f1d>[ 5-9 ]<088> You pierced %0 keenly.}
+#sub {You impaled %0 sharply.} {<fcac13b>[ 10-19 ]<088> You impaled %0 sharply.}
+#sub {You skewered %0.} {<fbfe062>[ 20-29 ]<088> You skewered %0.}
+#sub {You perforated %0 like a sieve.} {<fb1ff91>[ 30+ ]<088> You perforated %0 like a sieve.}
+#sub {You cut %0.} {<fc62828>[ 1 ]<088> You cut %0.}
+#sub {You hacked %0.} {<fcf561a>[ 2 ]<088> You hacked %0.}
+#sub {You gashed %0.} {<fd37c11>[ 3-4 ]<088> You gashed %0.}
+#sub {You chopped %0 bluntly.} {<fd09f1d>[ 5-9 ]<088> You chopped %0 bluntly.}
+#sub {You hewed %0 crudely.} {<fcac13b>[ 10-19 ]<088> You hewed %0 crudely.}
+#sub {You cleaved %0 into hash.} {<fbfe062>[ 20-29 ]<088> You cleaved %0 into hash.}
+#sub {You carved %0 with brute force.} {<fb1ff91>[ 30+ ]<088> You carved %0 with brute force.}
