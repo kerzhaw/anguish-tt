@@ -50,6 +50,7 @@
     open $container;
     take medicinals from $container;
     bind wounds;
+    exa medicinals;
     put medicinals in $container;
     close $container
 }
