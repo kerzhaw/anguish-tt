@@ -3,9 +3,10 @@
     get boomerang
 }
 
-#ACTION {The pouch of Hobbitat Gold is finished.}
+#ACTION {The packet of %0 is finished.}
 {
-    eat empty pouch
+    eat empty pouch;
+    eat empty packet
 }
 
 #ACTION {You drop your finished cigar and step on it.}
@@ -22,6 +23,12 @@
 #ACTION {You killed %0.}
 {
     eat corpse
+}
+
+#ACTION {You pay the pub keeper %1 gold and he hands you a pouch of tabaq.}
+{
+    #variable smokes {tabaq};
+    #echo {'smokes' now set to: $smokes}
 }
 
 #ACTION {Your party just killed %0.}
@@ -88,9 +95,9 @@
 #ALIAS {fp}
 {
     open $container;
-    take pouch from $container;
+    take $smokes from $container;
     fill pipe;
-    put pouch in $container;
+    put $smokes in $container;
     close $container
 }
 
@@ -173,10 +180,10 @@
 #ALIAS {sm}
 {
     open $container;
-    take pouch from $container;
+    take $smokes from $container;
     fill pipe;
     smoke pipe;
-    put pouch in $container;
+    put $smokes in $container;
     close $container
 }
 
@@ -302,6 +309,7 @@
 
 #TICKER {stay-alive} {blink} {10800}
 
-#VARIABLE {container} {sack}
-#VARIABLE {weap} {hammer}
+#VARIABLE {container} {fine fur sack}
+#VARIABLE {smokes} {tabaq}
+#VARIABLE {weap} {mace}
 
