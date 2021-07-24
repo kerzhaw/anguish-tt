@@ -47,6 +47,11 @@
     #session aa anguish.org 2222
 }
 
+#ALIAS {ab}
+{
+    abilities
+}
+
 #ALIAS {ac}
 {
     accept
@@ -85,6 +90,14 @@
 #ALIAS {door}
 {
     enter door
+}
+
+#ALIAS {eb}
+{
+    open container;
+    take $food from $container;
+    close container;
+    eat $food
 }
 
 #ALIAS {ec}
@@ -173,7 +186,7 @@
 
 #ALIAS {sa}
 {
-    sell all
+    xsell
 }
 
 #ALIAS {setc}
@@ -190,6 +203,11 @@
     smoke pipe;
     put $smokes in $container;
     close $container
+}
+
+#ALIAS {sp}
+{
+    smoke pipe
 }
 
 #ALIAS {sv}
@@ -281,6 +299,7 @@
 #PATHDIR {u} {d} {16}
 #PATHDIR {w} {e} {8}
 
+#SUBSTITUTE {An oak boomerang breaks apart!} {<518>%0<088>} {5}
 #SUBSTITUTE {An oak boomerang goes sailing through the air and smacks %*} {<138>%0<088>} {5}
 #SUBSTITUTE {The swelling in your right eye subsides %*} {<128>%0<088>} {5}
 #SUBSTITUTE {You battered %1's %2.} {<fb1ff91>[ 1 ]<088> %0} {5}
@@ -315,9 +334,10 @@
 #SUBSTITUTE {You slit %1's %2.} {<fcac13b>[ 3-4 ]<088> %0} {5}
 #SUBSTITUTE {You stuck %1's %2.} {<fbfe062>[ 2 ]<088> %0} {5}
 
-#TICKER {stay-alive} {blink} {10800}
+#TICKER {stay-alive} {blink} {3600}
 
 #VARIABLE {container} {fine fur sack}
+#VARIABLE {food} {bread}
 #VARIABLE {smokes} {tabaq}
 #VARIABLE {weap} {warclub}
 
