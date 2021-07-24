@@ -36,6 +36,11 @@
     eat corpse
 }
 
+#ACTION {Your pipe gets wet and goes out.}
+{
+    smoke pipe
+}
+
 
 #ALIAS {aa}
 {
@@ -276,6 +281,8 @@
 #PATHDIR {u} {d} {16}
 #PATHDIR {w} {e} {8}
 
+#SUBSTITUTE {An oak boomerang goes sailing through the air and smacks %*} {<138>%0<088>} {5}
+#SUBSTITUTE {The swelling in your right eye subsides %*} {<128>%0<088>} {5}
 #SUBSTITUTE {You battered %1's %2.} {<fb1ff91>[ 1 ]<088> %0} {5}
 #SUBSTITUTE {You bludgeoned %1's %2 heavily.} {<fd37c11>[ 10-19 ]<088> %0} {5}
 #SUBSTITUTE {You carved %1's %2 with brute force.} {<fc62828>[ 30+ ]<088> %0} {5}
