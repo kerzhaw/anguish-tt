@@ -296,6 +296,7 @@
 #SUBSTITUTE {You hammered %1's %2 brutaly.} {<fcf561a>[ 20-29 ]<088> %0} {5}
 #SUBSTITUTE {You hewed %1's %2 crudely.} {<fd37c11>[ 10-19 ]<088> %0} {5}
 #SUBSTITUTE {You impaled %1's %2 sharply.} {<fd37c11>[ 10-19 ]<088> %0} {5}
+#SUBSTITUTE {You improved your ability at thrown weapon! %*} {<128>%0<088>} {5}
 #SUBSTITUTE {You killed %1.} {<118>%0<088>} {5}
 #SUBSTITUTE {You lacerated %1's %2.} {<fcac13b>[ 3-4 ]<088> %0} {5}
 #SUBSTITUTE {You missed.} {<f0eeaff>[ 0 ]<088> %0} {5}
