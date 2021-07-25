@@ -9,6 +9,11 @@
     eat empty packet
 }
 
+#ACTION {The pipe is empty and goes out.}
+{
+    fp
+}
+
 #ACTION {You drop your finished cigar and step on it.}
 {
     take butt;
@@ -23,6 +28,11 @@
 #ACTION {You killed %0.}
 {
     eat corpse
+}
+
+#ACTION {You must be standing.}
+{
+    stand
 }
 
 #ACTION {You pay the pub keeper %1 gold and he hands you a pouch of tabaq.}
@@ -115,6 +125,7 @@
     open $container;
     take $smokes from $container;
     fill pipe;
+    exa $smokes;
     put $smokes in $container;
     close $container
 }
@@ -142,6 +153,11 @@
 }
 
 #ALIAS {k}
+{
+    kill %0
+}
+
+#ALIAS {kk}
 {
     throw boomerang at %0;
     wield $weap;
@@ -172,6 +188,11 @@
     extinguish pipe
 }
 
+#ALIAS {pm}
+{
+    pray remake staff
+}
+
 #ALIAS {pouches}
 {
     exa pouch %0
@@ -200,6 +221,7 @@
     open $container;
     take $smokes from $container;
     fill pipe;
+    exa $smokes;
     smoke pipe;
     put $smokes in $container;
     close $container
@@ -336,8 +358,8 @@
 
 #TICKER {stay-alive} {blink} {3600}
 
-#VARIABLE {container} {fine fur sack}
-#VARIABLE {food} {bread}
+#VARIABLE {container} {equipment rucksack}
+#VARIABLE {food} {cookie}
 #VARIABLE {smokes} {tabaq}
 #VARIABLE {weap} {warclub}
 
