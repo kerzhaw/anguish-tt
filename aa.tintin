@@ -1,6 +1,9 @@
 #ACTION {The oak boomerang tumbles to the ground.}
 {
-    get boomerang
+    get boomerang;
+    open $container;
+    put boomerang in $container;
+    close $container
 }
 
 #ACTION {The packet of %0 is finished.}
@@ -159,6 +162,9 @@
 
 #ALIAS {kk}
 {
+    open $container;
+    take boomerang from $container;
+    close $container;
     throw boomerang at %0;
     wield $weap;
     kill %0
