@@ -17,6 +17,11 @@
     fp
 }
 
+#ACTION {There is no opponent here.}
+{
+    search
+}
+
 #ACTION {You drop your finished cigar and step on it.}
 {
     take butt;
@@ -133,6 +138,12 @@
     close $container
 }
 
+#ALIAS {fw}
+{
+    fill bottle with water;
+    fill wineskin with water
+}
+
 #ALIAS {fx}
 {
     effects
@@ -166,8 +177,7 @@
     take boomerang from $container;
     close $container;
     throw boomerang at %0;
-    wield $weap;
-    kill %0
+    wield $weap
 }
 
 #ALIAS {map}
@@ -280,7 +290,16 @@
 #ALIAS {xcon}
 {
     open $container;
-    examine $container;
+    #regexp {%0} {^$}
+    {
+        examine $container;
+    };
+    #else
+    {
+        take %0 from $container;
+        examine %0;
+        put %0 in $container
+    };
     close $container
 }
 
@@ -364,7 +383,7 @@
 
 #TICKER {stay-alive} {blink} {3600}
 
-#VARIABLE {container} {equipment rucksack}
+#VARIABLE {container} {fine fur pack}
 #VARIABLE {food} {cookie}
 #VARIABLE {smokes} {tabaq}
 #VARIABLE {weap} {warclub}
