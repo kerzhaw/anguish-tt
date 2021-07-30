@@ -383,7 +383,7 @@
 
 #TICKER {stay-alive} {blink} {3600}
 
-#VARIABLE {container} {fine fur pack}
+#VARIABLE {container} {fine fur sack}
 #VARIABLE {food} {cookie}
 #VARIABLE {smokes} {tabaq}
 #VARIABLE {weap} {warclub}
