@@ -378,7 +378,7 @@
 #SUBSTITUTE {You cut %1'{s?} %2.} {<fb1ff91>[ 1 ]<088> %0} {5}
 #SUBSTITUTE {You gashed %1'{s?} %2.} {<fcac13b>[ 3-4 ]<088> %0} {5}
 #SUBSTITUTE {You hacked %1'{s?} %2.} {<fbfe062>[ 2 ]<088> %0} {5}
-#SUBSTITUTE {You hammered %1'{s?} %2 brutaly.} {<fcf561a>[ 20-29 ]<088> %0} {5}
+#SUBSTITUTE {You hammered %1'{s?} %2 brutally.} {<fcf561a>[ 20-29 ]<088> %0} {5}
 #SUBSTITUTE {You have used up this bundle of medicinals.} {<001>%0<088>} {5}
 #SUBSTITUTE {You hewed %1'{s?} %2 crudely.} {<fd37c11>[ 10-19 ]<088> %0} {5}
 #SUBSTITUTE {You impaled %1'{s?} %2 sharply.} {<fd37c11>[ 10-19 ]<088> %0} {5}
