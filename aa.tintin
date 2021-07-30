@@ -204,6 +204,11 @@
     extinguish pipe
 }
 
+#ALIAS {pale}
+{
+    pray transform wineskin into ale
+}
+
 #ALIAS {pm}
 {
     pray remake staff
@@ -303,6 +308,11 @@
     close $container
 }
 
+#ALIAS {xp}
+{
+    extinguish pipe
+}
+
 #ALIAS {xs}
 {
     examine dawlish
@@ -384,7 +394,7 @@
 #TICKER {stay-alive} {blink} {3600}
 
 #VARIABLE {container} {fine fur sack}
-#VARIABLE {food} {cookie}
+#VARIABLE {food} {knugget}
 #VARIABLE {smokes} {tabaq}
 #VARIABLE {weap} {warclub}
 
