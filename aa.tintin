@@ -176,6 +176,11 @@
     kill %0
 }
 
+#ALIAS {ka}
+{
+    keep all
+}
+
 #ALIAS {kk}
 {
     open $container;
@@ -212,6 +217,12 @@
 #ALIAS {pale}
 {
     pray transform wineskin into ale
+}
+
+#ALIAS {pd}
+{
+    pluck dart;
+    #3 throw dart at dartboard
 }
 
 #ALIAS {pm}
@@ -364,6 +375,7 @@
 #SUBSTITUTE {An oak boomerang breaks apart midair!} {<518>%0<088>} {5}
 #SUBSTITUTE {An oak boomerang breaks apart!} {<518>%0<088>} {5}
 #SUBSTITUTE {An oak boomerang goes sailing through the air and smacks %*} {<138>%0<088>} {5}
+#SUBSTITUTE {The %* ceases to glow.} {<068>%0<088>} {5}
 #SUBSTITUTE {The packet of tabaq is finished.} {<001>%0<088>} {5}
 #SUBSTITUTE {The swelling in your right eye subsides %*} {<128>%0<088>} {5}
 #SUBSTITUTE {There is enough left for %1 full pipes.} {There is enough left for <003>%1 full pipes<088>.} {5}
@@ -403,7 +415,7 @@
 
 #TICKER {stay-alive} {blink} {3600}
 
-#VARIABLE {container} {fine fur sack}
+#VARIABLE {container} {equipment rucksack}
 #VARIABLE {food} {knugget}
 #VARIABLE {smokes} {tabaq}
 #VARIABLE {weap} {warclub}
