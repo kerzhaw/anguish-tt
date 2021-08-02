@@ -49,6 +49,11 @@
     #echo {'smokes' now set to: $smokes}
 }
 
+#ACTION {Your armour shimmers and fades slightly.}
+{
+    sing
+}
+
 #ACTION {Your party just killed %0.}
 {
     eat corpse
@@ -117,9 +122,9 @@
 
 #ALIAS {eb}
 {
-    open container;
+    open $container;
     take $food from $container;
-    close container;
+    close $container;
     eat $food
 }
 
@@ -217,6 +222,11 @@
 #ALIAS {pale}
 {
     pray transform wineskin into ale
+}
+
+#ALIAS {pb}
+{
+    pray bless %0
 }
 
 #ALIAS {pd}
@@ -415,8 +425,8 @@
 
 #TICKER {stay-alive} {blink} {3600}
 
-#VARIABLE {container} {equipment rucksack}
+#VARIABLE {container} {large silk pack}
 #VARIABLE {food} {knugget}
 #VARIABLE {smokes} {tabaq}
-#VARIABLE {weap} {warclub}
+#VARIABLE {weap} {heavy jewel encrusted mace}
 
