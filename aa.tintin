@@ -1,3 +1,9 @@
+#action {The boomerang flips around, and flies back to you!} 
+{
+    open $container;
+    put boomerang in $container;
+    close $container
+}
 #ACTION {The oak boomerang tumbles to the ground.}
 {
     get boomerang;
@@ -8,13 +14,17 @@
 
 #ACTION {The packet of %0 is finished.}
 {
-    eat empty pouch;
     eat empty packet
 }
 
 #ACTION {The pipe is empty and goes out.}
 {
     fp
+}
+
+#ACTION {The pouch of Hobbitat Gold is finished.}
+{
+    eat empty pouch
 }
 
 #ACTION {There is no opponent here.}
@@ -35,7 +45,11 @@
 
 #ACTION {You killed %0.}
 {
-    eat corpse
+    eat corpse;
+    get dart;
+    open $container;
+    put dart in $container;
+    close $container
 }
 
 #ACTION {You must be standing.}
@@ -51,7 +65,7 @@
 
 #ACTION {Your armour shimmers and fades slightly.}
 {
-    sing
+    sing to armour
 }
 
 #ACTION {Your party just killed %0.}
@@ -78,6 +92,15 @@
 #ALIAS {ac}
 {
     accept
+}
+
+#ALIAS {bm}
+{
+    open $container;
+    take boomerang from $container;
+    close $container;
+    throw boomerang at %0;
+    wield $weap
 }
 
 #ALIAS {bw}
@@ -113,6 +136,15 @@
 #ALIAS {door}
 {
     enter door
+}
+
+#ALIAS {dt}
+{
+    open $container;
+    take dart from $container;
+    close $container;
+    throw dart at %0;
+    wield $weap
 }
 
 #ALIAS {dw}
@@ -164,6 +196,11 @@
     get all
 }
 
+#ALIAS {gac}
+{
+    get all coins
+}
+
 #ALIAS {gc}
 {
     get all from corpse %0
@@ -184,15 +221,6 @@
 #ALIAS {ka}
 {
     keep all
-}
-
-#ALIAS {kk}
-{
-    open $container;
-    take boomerang from $container;
-    close $container;
-    throw boomerang at %0;
-    wield $weap
 }
 
 #ALIAS {map}
@@ -277,6 +305,11 @@
 #ALIAS {sp}
 {
     smoke pipe
+}
+
+#ALIAS {ss}
+{
+    score session
 }
 
 #ALIAS {sv}
@@ -386,9 +419,9 @@
 #SUBSTITUTE {An oak boomerang breaks apart!} {<518>%0<088>} {5}
 #SUBSTITUTE {An oak boomerang goes sailing through the air and smacks %*} {<138>%0<088>} {5}
 #SUBSTITUTE {The %* ceases to glow.} {<068>%0<088>} {5}
-#SUBSTITUTE {The packet of tabaq is finished.} {<001>%0<088>} {5}
+#SUBSTITUTE {The packet of %* is finished.} {<001>%0<088>} {5}
 #SUBSTITUTE {The swelling in your right eye subsides %*} {<128>%0<088>} {5}
-#SUBSTITUTE {There is enough left for %1 full pipes.} {There is enough left for <003>%1 full pipes<088>.} {5}
+#SUBSTITUTE {There is enough %1 for %*.} {There is enough left for <003>%2<088>.} {5}
 #SUBSTITUTE {There seems to be enough here for %1 use{s?}.} {There seems to be enough here for <006>%1<088>} {5}
 #SUBSTITUTE {You battered %1'{s?} %2.} {<fb1ff91>[ 1 ]<088> %0} {5}
 #SUBSTITUTE {You bludgeoned %1'{s?} %2 heavily.} {<fd37c11>[ 10-19 ]<088> %0} {5}
@@ -423,10 +456,8 @@
 #SUBSTITUTE {You slit %1'{s?} %2.} {<fcac13b>[ 3-4 ]<088> %0} {5}
 #SUBSTITUTE {You stuck %1'{s?} %2.} {<fbfe062>[ 2 ]<088> %0} {5}
 
-#TICKER {stay-alive} {blink} {3600}
-
-#VARIABLE {container} {large silk pack}
-#VARIABLE {food} {knugget}
+#VARIABLE {container} {rugged knapsack}
+#VARIABLE {food} {rothe stew}
 #VARIABLE {smokes} {tabaq}
-#VARIABLE {weap} {heavy jewel encrusted mace}
+#VARIABLE {weap} {mace of crushing}
 
