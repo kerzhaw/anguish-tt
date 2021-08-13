@@ -1,9 +1,15 @@
-#action {The boomerang flips around, and flies back to you!} 
+#ACTION {A snare holding Dawlish.}
+{
+    cut snare
+}
+
+#ACTION {The boomerang flips around, and flies back to you!}
 {
     open $container;
     put boomerang in $container;
     close $container
 }
+
 #ACTION {The oak boomerang tumbles to the ground.}
 {
     get boomerang;
@@ -459,5 +465,5 @@
 #VARIABLE {container} {rugged knapsack}
 #VARIABLE {food} {rothe stew}
 #VARIABLE {smokes} {tabaq}
-#VARIABLE {weap} {mace of crushing}
+#VARIABLE {weap} {heavy jewel encrusted mace}
 
