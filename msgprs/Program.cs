@@ -1,21 +1,19 @@
-﻿using CommandLine;
+﻿using System.Threading.Tasks;
+using CommandLine;
 
 namespace msgprs
 {
     internal class Program
     {
-        private static void Main(string[] args)
-        {
-            Parser.
-                Default
-                .ParseArguments<Options>(args)
-                .WithParsed(RunOptions);
-        }
+        private static Task Main(string[] args) =>
+            Parser.Default.ParseArguments<Options>(args).WithParsedAsync(RunOptionsAsync);
 
-        private static void RunOptions(Options opts)
+        private static async Task RunOptionsAsync(Options opts)
         {
-            if(opts.Count) {
-                new CountOperations().RunOptions(opts);
+            if (opts.Count)
+            {
+                var operation = new CountOperations();
+                await operation.RunOptionsAsync(opts);
             }
         }
     }
