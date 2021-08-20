@@ -1,9 +1,8 @@
-#ACTION {%* drops at your feet and flops desperately on the ground.}
-{
+#alias {kf} {
     stand;
     unwield pole;
     wield $weap;
-    kill %0
+    k fish
 }
 
 #ACTION {A snare holding Dawlish.}
