@@ -1,0 +1,32 @@
+#SUBSTITUTE {You battered %1'{s?} %2.} {<fb1ff91>[ 1 ]<088> %0} {5}
+#SUBSTITUTE {You bludgeoned %1'{s?} %2 heavily.} {<fd37c11>[ 10-19 ]<088> %0} {5}
+#SUBSTITUTE {You carved %1'{s?} %2 with brute force.} {<fc62828>[ 30+ ]<088> %0} {5}
+#SUBSTITUTE {You chopped %1'{s?} %2 bluntly.} {<fd09f1d>[ 5-9 ]<088> %0} {5}
+#SUBSTITUTE {You cleaved %1'{s?} %2 into hash.} {<fcf561a>[ 20-29 ]<088> %0} {5}
+#SUBSTITUTE {You cleaved %1'{s?} %2 violently.} {<fc62828>[ 30+ ]<088> %0} {5}
+#SUBSTITUTE {You clubbed %1'{s?} %2.} {<fcac13b>[ 3-4 ]<088> %0} {5}
+#SUBSTITUTE {You cut %1'{s?} %2.} {<fb1ff91>[ 1 ]<088> %0} {5}
+#SUBSTITUTE {You gashed %1'{s?} %2.} {<fcac13b>[ 3-4 ]<088> %0} {5}
+#SUBSTITUTE {You hacked %1'{s?} %2.} {<fbfe062>[ 2 ]<088> %0} {5}
+#SUBSTITUTE {You hammered %1'{s?} %2 brutally.} {<fcf561a>[ 20-29 ]<088> %0} {5}
+#SUBSTITUTE {You have used up this bundle of medicinals.} {<001>%0<088>} {5}
+#SUBSTITUTE {You hewed %1'{s?} %2 crudely.} {<fd37c11>[ 10-19 ]<088> %0} {5}
+#SUBSTITUTE {You impaled %1'{s?} %2 sharply.} {<fd37c11>[ 10-19 ]<088> %0} {5}
+#SUBSTITUTE {You improved your ability at thrown weapon! %*} {<128>%0<088>} {5}
+#SUBSTITUTE {You killed %1.} {<118>%0<088>} {5}
+#SUBSTITUTE {You lacerated %1'{s?} %2.} {<fcac13b>[ 3-4 ]<088> %0} {5}
+#SUBSTITUTE {You missed.} {<f0eeaff>[ 0 ]<088> %0} {5}
+#SUBSTITUTE {You nicked %1'{s?} %2.} {<fb1ff91>[ 1 ]<088> %0} {5}
+#SUBSTITUTE {You notched %1'{s?} %2.} {<fbfe062>[ 2 ]<088> %0} {5}
+#SUBSTITUTE {You perforated %1'{s?} %2 like a sieve.} {<fc62828>[ 30+ ]<088> %0} {5}
+#SUBSTITUTE {You pierced %1'{s?} %2 keenly.} {<fd09f1d>[ 5-9 ]<088> %0} {5}
+#SUBSTITUTE {You pounded %1'{s?} %2 heartlessly.} {<fd09f1d>[ 5-9 ]<088> %0} {5}
+#SUBSTITUTE {You pricked %1'{s?} %2.} {<fb1ff91>[ 1 ]<088> %0} {5}
+#SUBSTITUTE {You pulverised %1'{s?} %2 into mash.} {<fc62828>[ 30+ ]<088> %0} {5}
+#SUBSTITUTE {You pummelled %1'{s?} %2.} {<fbfe062>[ 2 ]<088> %0} {5}
+#SUBSTITUTE {You sheared %1'{s?} %2 ruthlessly.} {<fcf561a>[ 20-29 ]<088> %0} {5}
+#SUBSTITUTE {You skewered %1'{s?} %2.} {<fcf561a>[ 20-29 ]<088> %0} {5}
+#SUBSTITUTE {You slashed %1'{s?} %2 viciously.} {<fd37c11>[ 10-19 ]<088> %0} {5}
+#SUBSTITUTE {You sliced %1'{s?} %2 deeply.} {<fd09f1d>[ 5-9 ]<088> %0} {5}
+#SUBSTITUTE {You slit %1'{s?} %2.} {<fcac13b>[ 3-4 ]<088> %0} {5}
+#SUBSTITUTE {You stuck %1'{s?} %2.} {<fbfe062>[ 2 ]<088> %0} {5}

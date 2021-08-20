@@ -1,5 +1,4 @@
 using System.Text;
-using System;
 using System.Collections.Generic;
 using System.IO;
 
@@ -19,7 +18,14 @@ namespace msgprs
             {"30+",   "<fc62828>[ 30+ ]<088> %0"},
         };
 
-        private string TransformMessage(string raw)
+        private readonly TextWriter _writer;
+
+        public ParseOperations(TextWriter writer)
+        {
+            _writer = writer;
+        }
+
+        private static string TransformMessage(string raw)
         {
             // You cleaved %1'{s?} %2 violently.
             // You hewed opponent's bodypart crudely.
@@ -48,7 +54,7 @@ namespace msgprs
                 var damageTransformed = Levels[damage];
                 var messageTransformed = TransformMessage(message);
 
-                Console.WriteLine($"#SUB {{{messageTransformed}}} {{{damageTransformed}}}");
+                _writer.WriteLine($"#SUB {{{messageTransformed}}} {{{damageTransformed}}}");
 
                 lineInput = reader.ReadLine();
             }

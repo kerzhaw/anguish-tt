@@ -1,4 +1,5 @@
-﻿using CommandLine;
+﻿using System;
+using CommandLine;
 
 namespace msgprs
 {
@@ -11,7 +12,7 @@ namespace msgprs
         {
             if (opts.Parse)
             {
-                var operation = new ParseOperations();
+                var operation = new ParseOperations(Console.Out);
                 operation.RunOptions(opts);
             }
         }
