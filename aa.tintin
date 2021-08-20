@@ -1,3 +1,11 @@
+#ACTION {%* drops at your feet and flops desperately on the ground.}
+{
+    stand;
+    unwield pole;
+    wield $weap;
+    kill %0
+}
+
 #ACTION {A snare holding Dawlish.}
 {
     cut snare
@@ -176,6 +184,11 @@
     pray fix
 }
 
+#ALIAS {ff}
+{
+    forfeit
+}
+
 #ALIAS {fp}
 {
     open $container;
@@ -184,6 +197,15 @@
     exa $smokes;
     put $smokes in $container;
     close $container
+}
+
+#ALIAS {fsh}
+{
+    unwield $weap;
+    wield pole;
+    bait pole;
+    sit on chair;
+    fish
 }
 
 #ALIAS {fw}
@@ -448,14 +470,11 @@
 #SUBSTITUTE {You grazed %1'{s?} %2.} {<fbfe062>[ 2 ]<088> %0} {5}
 #SUBSTITUTE {You hacked %1'{s?} %2.} {<fbfe062>[ 2 ]<088> %0} {5}
 #SUBSTITUTE {You hammered %1'{s?} %2 brutally.} {<fcf561a>[ 20-29 ]<088> %0} {5}
-#SUBSTITUTE {You have used up this bundle of medicinals.} {<001>%0<088>} {5}
 #SUBSTITUTE {You hewed %1'{s?} %2 crudely.} {<fd37c11>[ 10-19 ]<088> %0} {5}
 #SUBSTITUTE {You hit %1'{s?} %2 hard.} {<fd09f1d>[ 5-9 ]<088> %0} {5}
 #SUBSTITUTE {You hit %1'{s?} %2 very hard.} {<fd37c11>[ 10-19 ]<088> %0} {5}
 #SUBSTITUTE {You hit %1'{s?} %2.} {<fcac13b>[ 3-4 ]<088> %0} {5}
 #SUBSTITUTE {You impaled %1'{s?} %2 sharply.} {<fd37c11>[ 10-19 ]<088> %0} {5}
-#SUBSTITUTE {You improved your ability at thrown weapon! %*} {<128>%0<088>} {5}
-#SUBSTITUTE {You killed %1.} {<118>%0<088>} {5}
 #SUBSTITUTE {You lacerated %1'{s?} %2.} {<fcac13b>[ 3-4 ]<088> %0} {5}
 #SUBSTITUTE {You massacred %1'{s?} %2 to small fragments.} {<fc62828>[ 30+ ]<088> %0} {5}
 #SUBSTITUTE {You missed.} {<f0eeaff>[ 0 ]<088> %0} {5}
@@ -483,5 +502,5 @@
 #VARIABLE {container} {rugged knapsack}
 #VARIABLE {food} {rothe stew}
 #VARIABLE {smokes} {tabaq}
-#VARIABLE {weap} {heavy jewel encrusted mace}
+#VARIABLE {weap} {hammer}
 
