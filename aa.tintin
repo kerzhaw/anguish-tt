@@ -297,6 +297,11 @@
     #echo {'container' now set to: $container}
 }
 
+#ALIAS {sk}
+{
+    skills
+}
+
 #ALIAS {sm}
 {
     open $container;
