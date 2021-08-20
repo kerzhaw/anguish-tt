@@ -1,12 +1,22 @@
-﻿using System;
+﻿using CommandLine;
 
 namespace msgprs
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Parser.
+                Default
+                .ParseArguments<Options>(args)
+                .WithParsed(RunOptions);
+        }
+
+        private static void RunOptions(Options opts)
+        {
+            if(opts.Count) {
+                new CountOperations().RunOptions(opts);
+            }
         }
     }
 }
