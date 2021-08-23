@@ -380,7 +380,20 @@
     #else
     {
         examine %0;
-        search %0
+    }
+}
+
+#ALIAS {xx}
+{
+    #regexp {%0} {^$}
+    {
+        look at opponent
+    };
+    #else
+    {
+        examine %0;
+        search %0;
+        search
     }
 }
 
