@@ -379,21 +379,7 @@
     };
     #else
     {
-        examine %0;
-    }
-}
-
-#ALIAS {xx}
-{
-    #regexp {%0} {^$}
-    {
-        look at opponent
-    };
-    #else
-    {
-        examine %0;
-        search %0;
-        search
+        examine %0
     }
 }
 
@@ -426,6 +412,19 @@
 #ALIAS {xs}
 {
     examine dawlish
+}
+
+#ALIAS {xx}
+{
+    #regexp {%0} {^$}
+    {
+        search
+    };
+    #else
+    {
+        examine %0;
+        search %0
+    }
 }
 
 
