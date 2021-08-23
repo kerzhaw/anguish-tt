@@ -51,7 +51,11 @@
 
 #ACTION {You killed %0.}
 {
-    #if{$eat==1} {eat corpse;get dart;};
+    #if {$eat==1}
+    {
+        eat corpse;
+        get dart
+    };
     #else
     {
         get dart from corpse
