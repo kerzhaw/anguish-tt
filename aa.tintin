@@ -51,8 +51,11 @@
 
 #ACTION {You killed %0.}
 {
-    eat corpse;
-    get dart;
+    #if{$eat==1} {eat corpse;get dart;};
+    #else
+    {
+        get dart from corpse
+    };
     open $container;
     put dart in $container;
     close $container
@@ -249,6 +252,11 @@
     unwield pole;
     wield $weap;
     k fish
+}
+
+#ALIAS {light}
+{
+    pray light
 }
 
 #ALIAS {map}
@@ -517,6 +525,7 @@
 #SUBSTITUTE {You winged %1'{s?} %2 barely.} {<fb1ff91>[ 1 ]<088> %0} {5}
 
 #VARIABLE {container} {rugged knapsack}
+#VARIABLE {eat} {0}
 #VARIABLE {food} {rothe stew}
 #VARIABLE {smokes} {tabaq}
 #VARIABLE {weap} {hammer}
