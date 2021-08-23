@@ -1,10 +1,3 @@
-#alias {kf} {
-    stand;
-    unwield pole;
-    wield $weap;
-    k fish
-}
-
 #ACTION {A snare holding Dawlish.}
 {
     cut snare
@@ -250,6 +243,14 @@
     keep all
 }
 
+#ALIAS {kf}
+{
+    stand;
+    unwield pole;
+    wield $weap;
+    k fish
+}
+
 #ALIAS {map}
 {
     open $container;
@@ -316,6 +317,11 @@
 {
     #variable container %0;
     #echo {'container' now set to: $container}
+}
+
+#ALIAS {sf}
+{
+    salt fish
 }
 
 #ALIAS {sk}
