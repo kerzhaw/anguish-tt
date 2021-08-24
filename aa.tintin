@@ -65,6 +65,12 @@
     close $container
 }
 
+#ACTION {^You missed.}
+{
+    #echo {<f0eeaff>[ 0 ]<088> %0};
+    #math {$misses+1}
+}
+
 #ACTION {^You must be standing.}
 {
     stand
@@ -477,14 +483,14 @@
 #PATHDIR {u} {d} {16}
 #PATHDIR {w} {e} {8}
 
+#SUBSTITUTE {There is enough %1 for %*.} {There is enough left for <003>%2<088>.} {5}
+#SUBSTITUTE {There seems to be enough here for %1 use{s?}.} {There seems to be enough here for <006>%1<088>} {5}
 #SUBSTITUTE {^An oak boomerang breaks apart midair!} {<518>%0<088>} {5}
 #SUBSTITUTE {^An oak boomerang breaks apart!} {<518>%0<088>} {5}
 #SUBSTITUTE {^An oak boomerang goes sailing through the air and smacks %*} {<138>%0<088>} {5}
 #SUBSTITUTE {^The %* ceases to glow.} {<068>%0<088>} {5}
 #SUBSTITUTE {^The packet of %* is finished.} {<001>%0<088>} {5}
 #SUBSTITUTE {^The swelling in your right eye subsides %*} {<128>%0<088>} {5}
-#SUBSTITUTE {There is enough %1 for %*.} {There is enough left for <003>%2<088>.} {5}
-#SUBSTITUTE {There seems to be enough here for %1 use{s?}.} {There seems to be enough here for <006>%1<088>} {5}
 #SUBSTITUTE {^You battered %1'{s?} %2.} {<fb1ff91>[ 1 ]<088> %0} {5}
 #SUBSTITUTE {^You beat %1'{s?} %2 soundly.} {<fd37c11>[ 10-19 ]<088> %0} {5}
 #SUBSTITUTE {^You bludgeoned %1'{s?} %2 heavily.} {<fd37c11>[ 10-19 ]<088> %0} {5}
@@ -506,7 +512,6 @@
 #SUBSTITUTE {^You impaled %1'{s?} %2 sharply.} {<fd37c11>[ 10-19 ]<088> %0} {5}
 #SUBSTITUTE {^You lacerated %1'{s?} %2.} {<fcac13b>[ 3-4 ]<088> %0} {5}
 #SUBSTITUTE {^You massacred %1'{s?} %2 to small fragments.} {<fc62828>[ 30+ ]<088> %0} {5}
-#SUBSTITUTE {^You missed.} {<f0eeaff>[ 0 ]<088> %0} {5}
 #SUBSTITUTE {^You nicked %1'{s?} %2.} {<fb1ff91>[ 1 ]<088> %0} {5}
 #SUBSTITUTE {^You notched %1'{s?} %2.} {<fbfe062>[ 2 ]<088> %0} {5}
 #SUBSTITUTE {^You pelted %1'{s?} %2 with a series of quick jabs.} {<fd09f1d>[ 5-9 ]<088> %0} {5}
@@ -531,8 +536,7 @@
 #VARIABLE {container} {rugged knapsack}
 #VARIABLE {eat} {1}
 #VARIABLE {food} {rothe stew}
+#VARIABLE {misses} {0}
 #VARIABLE {smokes} {tabaq}
 #VARIABLE {weap} {hammer}
-#variable {misses} {0}
-
 
