@@ -529,7 +529,7 @@
 #SUBSTITUTE {You winged %1'{s?} %2 barely.} {<fb1ff91>[ 1 ]<088> %0} {5}
 
 #VARIABLE {container} {rugged knapsack}
-#VARIABLE {eat} {0}
+#VARIABLE {eat} {1}
 #VARIABLE {food} {rothe stew}
 #VARIABLE {smokes} {tabaq}
 #VARIABLE {weap} {hammer}
