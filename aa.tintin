@@ -49,7 +49,24 @@
     eat empty tin
 }
 
-#ACTION {^You killed %0.}
+#ACTION {^You missed.$}
+{
+    #math {misses} {$misses+1};
+    #echo {<f0eeaff>[ 0 ]<088> %0}
+}
+
+#ACTION {^You must be standing.}
+{
+    stand
+}
+
+#ACTION {^You pay the pub keeper %1 gold and he hands you a pouch of tabaq.}
+{
+    #variable smokes {tabaq};
+    #echo {'smokes' now set to: $smokes}
+}
+
+#ACTION {^You {killed|vanquished} %0.}
 {
     #if {$eat==1}
     {
@@ -62,32 +79,9 @@
     };
     open $container;
     put dart in $container;
-    close $container
-}
-
-#ACTION {^You missed.$}
-{
-    #math {misses} {$misses+1};
-    #if {$misses > 2}
-    {
-        #variable misses 0;
-        #echo {<f000000><b0eeaff>[ 0 ]<088> %0}
-    };
-    #else
-    {
-        #echo {<f0eeaff>[ 0 ]<088> %0}
-    }
-}
-
-#ACTION {^You must be standing.}
-{
-    stand
-}
-
-#ACTION {^You pay the pub keeper %1 gold and he hands you a pouch of tabaq.}
-{
-    #variable smokes {tabaq};
-    #echo {'smokes' now set to: $smokes}
+    close $container;
+    #echo {You missed <f0eeaff>$misses<088> time(s).};
+    #variable misses 0
 }
 
 #ACTION {^Your armour shimmers and fades slightly.}
@@ -480,6 +474,8 @@
 #CONFIG {VERBOSE} {OFF}
 #CONFIG {WORDWRAP} {ON}
 
+#GAG {^You missed.$}
+
 #PATHDIR {d} {u} {32}
 #PATHDIR {e} {w} {2}
 #PATHDIR {n} {s} {1}
@@ -520,7 +516,6 @@
 #SUBSTITUTE {^You impaled %1'{s?} %2 sharply.} {<fd37c11>[ 10-19 ]<088> %0} {5}
 #SUBSTITUTE {^You lacerated %1'{s?} %2.} {<fcac13b>[ 3-4 ]<088> %0} {5}
 #SUBSTITUTE {^You massacred %1'{s?} %2 to small fragments.} {<fc62828>[ 30+ ]<088> %0} {5}
-#SUBSTITUTE {^You missed.} {} {5}
 #SUBSTITUTE {^You nicked %1'{s?} %2.} {<fb1ff91>[ 1 ]<088> %0} {5}
 #SUBSTITUTE {^You notched %1'{s?} %2.} {<fbfe062>[ 2 ]<088> %0} {5}
 #SUBSTITUTE {^You pelted %1'{s?} %2 with a series of quick jabs.} {<fd09f1d>[ 5-9 ]<088> %0} {5}
@@ -545,7 +540,7 @@
 #VARIABLE {container} {rugged knapsack}
 #VARIABLE {eat} {1}
 #VARIABLE {food} {rothe stew}
-#VARIABLE {misses} {1}
+#VARIABLE {misses} {4}
 #VARIABLE {smokes} {tabaq}
-#VARIABLE {weap} {hammer}
+#VARIABLE {weap} {mace}
 
