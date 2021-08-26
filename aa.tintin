@@ -52,7 +52,7 @@
 #ACTION {^You missed.$}
 {
     #math {misses} {$misses+1};
-    #echo {<f0eeaff>[ 0 ]<088> %0}
+    #echo {<f0eeaff>[ 0 ]<088> %0 ($misses)}
 }
 
 #ACTION {^You must be standing.}
