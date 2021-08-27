@@ -80,7 +80,7 @@
     open $container;
     put dart in $container;
     close $container;
-    #echo {<f0eeaff>You missed [ <178>$misses<088> ] <f0eeaff>time(s).<088>};
+    #echo {<f0eeaff>You missed [ <178>$misses<088> <f0eeaff>] time(s).<088>};
     #variable misses 0
 }
 
