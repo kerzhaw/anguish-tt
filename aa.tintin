@@ -113,7 +113,7 @@
 {
     getcon boomerang;
     throw boomerang at %0;
-    wield $weap
+    wwield
 }
 
 #ALIAS {bw}
@@ -153,7 +153,7 @@
 {
     getcon dart;
     throw dart at %0;
-    wield $weap
+    wwield
 }
 
 #ALIAS {dw}
@@ -253,7 +253,7 @@
 {
     stand;
     unwield pole;
-    wield $weap;
+    wwield;
     k fish
 }
 
@@ -314,7 +314,7 @@
 {
     #if {"$container" == ""}
     {
-        #echo {No container is present.}
+        
     };
     #else
     {
@@ -383,6 +383,18 @@
 {
     #variable weap %0;
     #echo {'weap' now set to: $weap}
+}
+
+#ALIAS {wwield}
+{
+    #if {"$weap" == ""}
+    {
+        
+    };
+    #else
+    {
+        wield $weap
+    }
 }
 
 #ALIAS {x}
@@ -537,5 +549,5 @@
 #VARIABLE {food} {rothe stew}
 #VARIABLE {misses} {4}
 #VARIABLE {smokes} {tabaq}
-#VARIABLE {weap} {mace}
+#VARIABLE {weap} {}
 
