@@ -5,17 +5,13 @@
 
 #ACTION {^The boomerang flips around, and flies back to you!}
 {
-    open $container;
-    put boomerang in $container;
-    close $container
+    putcon boomerang
 }
 
 #ACTION {^The oak boomerang tumbles to the ground.}
 {
     get boomerang;
-    open $container;
-    put boomerang in $container;
-    close $container
+    putcon boomerang
 }
 
 #ACTION {^The packet of %0 is finished.}
@@ -77,9 +73,7 @@
     {
         get dart from corpse
     };
-    open $container;
-    put dart in $container;
-    close $container;
+    putcon dart;
     #echo {<f0eeaff>You missed [ <178>$misses<088> <f0eeaff>] time(s).<088>};
     #variable misses 0
 }
@@ -117,21 +111,17 @@
 
 #ALIAS {bm}
 {
-    open $container;
-    take boomerang from $container;
-    close $container;
+    getcon boomerang;
     throw boomerang at %0;
     wield $weap
 }
 
 #ALIAS {bw}
 {
-    open $container;
-    take medicinals from $container;
+    getcon medicinals;
     bind wounds;
     exa medicinals;
-    put medicinals in $container;
-    close $container
+    putcon medicinals
 }
 
 #ALIAS {c}
@@ -161,9 +151,7 @@
 
 #ALIAS {dt}
 {
-    open $container;
-    take dart from $container;
-    close $container;
+    getcon dart;
     throw dart at %0;
     wield $weap
 }
@@ -175,9 +163,7 @@
 
 #ALIAS {eb}
 {
-    open $container;
-    take $food from $container;
-    close $container;
+    getcon $food;
     eat $food
 }
 
@@ -198,12 +184,10 @@
 
 #ALIAS {fp}
 {
-    open $container;
-    take $smokes from $container;
+    getcon $smokes;
     fill pipe;
     exa $smokes;
-    put $smokes in $container;
-    close $container
+    putcon $smokes
 }
 
 #ALIAS {fsh}
@@ -243,9 +227,16 @@
 
 #ALIAS {getcon}
 {
-    open $container;
-    get %0 from $container;
-    close $container
+    #if {"$container" == ""}
+    {
+        
+    };
+    #else
+    {
+        open $container;
+        get %0 from $container;
+        close $container
+    }
 }
 
 #ALIAS {k}
@@ -273,11 +264,9 @@
 
 #ALIAS {m}
 {
-    open $container;
-    take map from $container;
+    getcon map;
     read map;
-    put map in $container;
-    close $container
+    putcon map
 }
 
 #ALIAS {meds}
@@ -323,9 +312,16 @@
 
 #ALIAS {putcon}
 {
-    open $container;
-    put %0 in $container;
-    close $container
+    #if {"$container" == ""}
+    {
+        #echo {No container is present.}
+    };
+    #else
+    {
+        open $container;
+        put %0 in $container;
+        close $container
+    }
 }
 
 #ALIAS {sa}
@@ -351,13 +347,11 @@
 
 #ALIAS {sm}
 {
-    open $container;
-    take $smokes from $container;
+    getcon $smokes;
     fill pipe;
     exa $smokes;
     smoke pipe;
-    put $smokes in $container;
-    close $container
+    putcon $smokes
 }
 
 #ALIAS {sp}
@@ -538,7 +532,7 @@
 #SUBSTITUTE {^You tickled %1'{s?} %2.} {<fb1ff91>[ 1 ]<088> %0} {5}
 #SUBSTITUTE {^You winged %1'{s?} %2 barely.} {<fb1ff91>[ 1 ]<088> %0} {5}
 
-#VARIABLE {container} {rugged knapsack}
+#VARIABLE {container} {}
 #VARIABLE {eat} {1}
 #VARIABLE {food} {rothe stew}
 #VARIABLE {misses} {4}
