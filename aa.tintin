@@ -547,7 +547,7 @@
 #VARIABLE {container} {}
 #VARIABLE {eat} {1}
 #VARIABLE {food} {rothe stew}
-#VARIABLE {misses} {4}
+#VARIABLE {misses} {0}
 #VARIABLE {smokes} {tabaq}
 #VARIABLE {weap} {}
 
