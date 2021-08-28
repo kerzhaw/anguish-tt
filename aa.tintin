@@ -74,7 +74,7 @@
         get dart from corpse
     };
     putcon dart;
-    #echo {<f0eeaff>You missed [ <178>$misses<088> <f0eeaff>] time(s).<088>};
+    #echo {<f0eeaff>You missed your opponent [ <178>$misses<088> <f0eeaff>] time(s).<088>};
     #variable misses 0
 }
 
