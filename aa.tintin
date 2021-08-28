@@ -229,7 +229,7 @@
 {
     #if {"$container" == ""}
     {
-        
+        #nop {Do nothing}
     };
     #else
     {
@@ -314,7 +314,7 @@
 {
     #if {"$container" == ""}
     {
-        
+        #nop {Do nothing}
     };
     #else
     {
