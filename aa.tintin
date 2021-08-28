@@ -116,6 +116,11 @@
     wwield
 }
 
+#ALIAS {bootshop}
+{
+    tell armageddon shop
+}
+
 #ALIAS {bw}
 {
     getcon medicinals;
@@ -371,7 +376,7 @@
 
 #ALIAS {t}
 {
-    thaw %0
+    time
 }
 
 #ALIAS {tin}
