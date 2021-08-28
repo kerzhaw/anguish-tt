@@ -389,7 +389,7 @@
 {
     #if {"$weap" == ""}
     {
-        
+        #nop {Do nothing}
     };
     #else
     {
