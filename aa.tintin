@@ -10,8 +10,7 @@
 
 #ACTION {^The oak boomerang tumbles to the ground.}
 {
-    get boomerang;
-    putcon boomerang
+    if {$have_boom==1} {get boomerang;putcon boomerang}
 }
 
 #ACTION {^The packet of %0 is finished.}
@@ -552,6 +551,7 @@
 #VARIABLE {container} {}
 #VARIABLE {eat} {1}
 #VARIABLE {food} {rothe stew}
+#VARIABLE {have_boom} {0}
 #VARIABLE {misses} {0}
 #VARIABLE {smokes} {tabaq}
 #VARIABLE {weap} {}
