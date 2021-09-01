@@ -10,7 +10,7 @@
 
 #ACTION {^The oak boomerang tumbles to the ground.}
 {
-    if {$have_boom==1} {get boomerang;putcon boomerang}
+    #if {$have_boom==1} {get boomerang;putcon boomerang}
 }
 
 #ACTION {^The packet of %0 is finished.}
