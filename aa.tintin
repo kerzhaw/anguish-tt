@@ -3,6 +3,16 @@
     cut snare
 }
 
+#ACTION {^An oak boomerang breaks apart midair!$}
+{
+    #variable have_boom 0
+}
+
+#ACTION {^An oak boomerang breaks apart!}
+{
+    #variable have_boom 0
+}
+
 #ACTION {^The boomerang flips around, and flies back to you!}
 {
     putcon boomerang
@@ -63,6 +73,11 @@
 {
     #variable smokes {tabaq};
     #echo {'smokes' now set to: $smokes}
+}
+
+#ACTION {^You take an oak boomerang.$}
+{
+    #variable have_boom 1
 }
 
 #ACTION {^You {killed|vanquished} %0.}
@@ -554,9 +569,9 @@
 
 #VARIABLE {container} {}
 #VARIABLE {eat} {0}
-#VARIABLE {food} {rothe stew}
+#VARIABLE {food} {}
 #VARIABLE {have_boom} {0}
 #VARIABLE {misses} {0}
-#VARIABLE {smokes} {tabaq}
+#VARIABLE {smokes} {}
 #VARIABLE {weap} {}
 
