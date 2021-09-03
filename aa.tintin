@@ -152,6 +152,12 @@
     pray cure
 }
 
+#ALIAS {container}
+{
+    #variable container %0;
+    #echo {Ok, current container is set to '%0'.}
+}
+
 #ALIAS {cu}
 {
     current
@@ -405,7 +411,7 @@
 #ALIAS {weap}
 {
     #variable weap %0;
-    #echo {'weap' now set to: $weap}
+    #echo {Ok, current weapon is set to '%0'.}
 }
 
 #ALIAS {wwield}
