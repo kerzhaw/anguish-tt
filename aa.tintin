@@ -69,6 +69,11 @@
     stand
 }
 
+#ACTION {^You panic and try to flee!$}
+{
+    f
+}
+
 #ACTION {^You pay the pub keeper %1 gold and he hands you a pouch of tabaq.}
 {
     #variable smokes {tabaq};
@@ -408,6 +413,13 @@
     exa tin %0
 }
 
+#ALIAS {tw}
+{
+    getcon $thrown_weapon;
+    throw $thrown_weapon at %0;
+    wwield
+}
+
 #ALIAS {weap}
 {
     #variable weap %0;
@@ -578,6 +590,8 @@
 #VARIABLE {food} {}
 #VARIABLE {have_boom} {0}
 #VARIABLE {misses} {0}
+#VARIABLE {result} {10013}
 #VARIABLE {smokes} {}
+#VARIABLE {thrown_weapon} {}
 #VARIABLE {weap} {}
 
