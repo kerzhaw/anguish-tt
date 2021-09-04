@@ -216,6 +216,12 @@
     forfeit
 }
 
+#ALIAS {food}
+{
+    #variable food %0;
+    #echo {Ok, current food is set to '%0'.}
+}
+
 #ALIAS {fp}
 {
     getcon $smokes;
@@ -270,6 +276,20 @@
         open $container;
         get %0 from $container;
         close $container
+    }
+}
+
+#ALIAS {have_boom}
+{
+    #if {$have_boom==0}
+    {
+        #variable have_boom 1;
+        #echo {Ok, you now have a boomerang.}
+    };
+    #else
+    {
+        #variable have_boom 0;
+        #echo {Ok, you no longer have a boomerang.}
     }
 }
 
@@ -388,6 +408,12 @@
     putcon $smokes
 }
 
+#ALIAS {smokes}
+{
+    #variable {smokes} {%0};
+    #echo {'smokes' now set to: $smokes}
+}
+
 #ALIAS {sp}
 {
     smoke pipe
@@ -406,6 +432,12 @@
 #ALIAS {t}
 {
     time
+}
+
+#ALIAS {thrown_weapon}
+{
+    #variable thrown_weapon %0;
+    #echo {Ok, current thrown weapon is set to '%0'.}
 }
 
 #ALIAS {tin}
@@ -590,7 +622,6 @@
 #VARIABLE {food} {}
 #VARIABLE {have_boom} {0}
 #VARIABLE {misses} {0}
-#VARIABLE {result} {10013}
 #VARIABLE {smokes} {}
 #VARIABLE {thrown_weapon} {}
 #VARIABLE {weap} {}
