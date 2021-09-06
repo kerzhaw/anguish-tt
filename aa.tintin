@@ -42,6 +42,12 @@
     eat empty pouch
 }
 
+#ACTION {^The sage has done something to your mind for sure!!! You feel very confused.$}
+{
+    get $weap;
+    wield $weap
+}
+
 #ACTION {^There is no opponent here.}
 {
     search
