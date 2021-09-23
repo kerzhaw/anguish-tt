@@ -179,6 +179,11 @@
     drop all
 }
 
+#ALIAS {dc}
+{
+    drink canteen
+}
+
 #ALIAS {de}
 {
     deliver
@@ -215,6 +220,11 @@
 #ALIAS {f}
 {
     pray fix
+}
+
+#ALIAS {fc}
+{
+    fill empty canteen with stout
 }
 
 #ALIAS {ff}
